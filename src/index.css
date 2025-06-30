@@ -1,0 +1,88 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 227 227 227;
+    --foreground: 64 64 64;
+
+    --card: 255 255 255;
+    --card-foreground: 64 64 64;
+
+    --popover: 255 255 255;
+    --popover-foreground: 64 64 64;
+
+    --primary: 0 0 0;
+    --primary-foreground: 255 255 255;
+
+    --secondary: 243 244 246;
+    --secondary-foreground: 17 24 39;
+
+    --muted: 243 244 246;
+    --muted-foreground: 107 114 128;
+
+    --accent: 243 244 246;
+    --accent-foreground: 17 24 39;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 248 250 252;
+
+    --border: 209 213 219;
+    --input: 209 213 219;
+    --ring: 0 0 0;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Glassmorphism Effect */
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .neumorphic {
+    background: #e3e3e3;
+    box-shadow: 8px 8px 16px #c4c4c4, -8px -8px 16px #ffffff;
+    transition: all 0.3s ease;
+  }
+
+  .neumorphic:hover {
+    box-shadow: 12px 12px 24px #c4c4c4, -12px -12px 24px #ffffff, 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .section-padding {
+    @apply py-20 px-6;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

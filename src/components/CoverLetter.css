@@ -1,0 +1,388 @@
+.cover-letter {
+    /* Base styles for the component */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Animation for fade-in-up effect */
+@keyframes fadeInUpCustom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cover-letter .fade-in-up {
+    animation: fadeInUpCustom 0.6s ease-out forwards;
+}
+
+/* Controls Section */
+.cover-letter .controls-section {
+    margin-bottom: 1.5rem;
+}
+
+.cover-letter .controls-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.cover-letter .control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cover-letter .controls-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.cover-letter .control-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+.cover-letter .control-btn.active {
+    background-color: #000 !important;
+    color: #fff !important;
+    border-color: #000 !important;
+}
+
+/* Form Styles */
+.cover-letter .form-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.cover-letter .form-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.cover-letter .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cover-letter .form-input {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    transition: border-color 0.3s ease;
+}
+
+.cover-letter .form-input.error {
+    border-color: #ef4444 !important;
+}
+
+.cover-letter .error-message {
+    font-size: 0.75rem;
+    color: #ef4444;
+    margin-top: 0.25rem;
+}
+
+/* Bubble Section */
+.cover-letter .bubble-section {
+    margin-top: 0.5rem;
+}
+
+.cover-letter .bubble-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.cover-letter .bubble {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    border: 1px solid #d1d5db;
+    background: #f3f4f6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cover-letter .bubble.selected {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.cover-letter .bubble.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.cover-letter .custom-text-container {
+    margin-top: 0.5rem;
+}
+
+.cover-letter .custom-text-input {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    border: 1px solid #d1d5db;
+}
+
+/* University Dropdown */
+.cover-letter .university-search-container {
+    position: relative;
+}
+
+.cover-letter .university-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    margin-top: 0.25rem;
+}
+
+.cover-letter .university-option {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.cover-letter .university-option:hover {
+    background: #f3f4f6;
+}
+
+.cover-letter .university-name {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #000;
+}
+
+.cover-letter .university-city {
+    font-size: 0.75rem;
+    color: #4b5563;
+}
+
+/* Submit Section */
+.cover-letter .submit-section {
+    text-align: center;
+}
+
+.cover-letter .submit-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 300;
+    background: #000;
+    color: #fff;
+    border: 1px solid #000;
+    transition: all 0.3s ease;
+}
+
+.cover-letter .submit-btn:hover {
+    background: #1f2937;
+    border-color: #1f2937;
+}
+
+/* Loading Section */
+.cover-letter .loading-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #000;
+    text-align: center;
+}
+
+.cover-letter .loading-subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #4b5563;
+    text-align: center;
+}
+
+/* Result Section */
+.cover-letter .result-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cover-letter .result-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #000;
+}
+
+.cover-letter .result-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.cover-letter .action-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    border: 1px solid #d1d5db;
+    background: #f3f4f6;
+    transition: all 0.3s ease;
+}
+
+.cover-letter .action-btn:hover {
+    background: #e5e7eb;
+}
+
+.cover-letter .action-btn.primary {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.cover-letter .action-btn.primary:hover {
+    background: #1f2937;
+    border-color: #1f2937;
+}
+
+.cover-letter .letter-content {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #000;
+}
+
+/* Saved Letters Section */
+.cover-letter .saved-title {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #000;
+}
+
+.cover-letter .saved-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.cover-letter .saved-item {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+}
+
+.cover-letter .saved-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cover-letter .saved-item-title {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #000;
+}
+
+.cover-letter .saved-item-date {
+    font-size: 0.75rem;
+    color: #4b5563;
+}
+
+.cover-letter .saved-item-target {
+    font-size: 0.875rem;
+    color: #4b5563;
+    margin: 0.5rem 0;
+}
+
+.cover-letter .saved-item-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.cover-letter .saved-action-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    border: 1px solid #d1d5db;
+    background: #f3f4f6;
+    transition: all 0.3s ease;
+}
+
+.cover-letter .saved-action-btn:hover {
+    background: #e5e7eb;
+}
+
+.cover-letter .saved-action-btn.load {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.cover-letter .saved-action-btn.load:hover {
+    background: #1f2937;
+    border-color: #1f2937;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cover-letter .controls-grid,
+    .cover-letter .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cover-letter .form-title,
+    .cover-letter .loading-title,
+    .cover-letter .result-title,
+    .cover-letter .saved-title {
+        font-size: 1.25rem;
+    }
+
+    .cover-letter .submit-btn,
+    .cover-letter .action-btn,
+    .cover-letter .saved-action-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cover-letter .university-dropdown {
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cover-letter .controls-buttons,
+    .cover-letter .result-actions,
+    .cover-letter .saved-item-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .cover-letter .bubble-container {
+        flex-direction: column;
+    }
+
+    .cover-letter .bubble {
+        width: 100%;
+        text-align: center;
+    }
+}
