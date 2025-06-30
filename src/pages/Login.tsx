@@ -36,11 +36,12 @@ const Login = () => {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-gray-200 border border-black"
+              className="w-full bg-gray-200 text-black border border-gray-400 rounded-lg p-3 placeholder-gray-500"
               placeholder="Enter your email"
               required
             />
           </div>
+
 
           <div>
             <label htmlFor="password" className="block text-sm font-light text-gray-700 mb-2">
@@ -51,7 +52,7 @@ const Login = () => {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-gray-200 border border-black"
+              className="w-full bg-gray-200 text-black border border-gray-400 rounded-lg p-3 placeholder-gray-500"
               placeholder="Enter your password"
               required
             />

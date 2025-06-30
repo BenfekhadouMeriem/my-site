@@ -16,8 +16,8 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: "Features", href: "#features" },
     { name: "How It Works", href: "#how-it-works" },
+    { name: "Features", href: "#features" },
     { name: "Pricing", href: "#pricing" },
     { name: "FAQ", href: "#faq" },
   ];
@@ -43,9 +43,10 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-light tracking-tight text-black hover:opacity-80 transition-opacity">
-            Consulting
+          <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
+            <img src="/logo.webp" alt="Logo" className="h-8 w-auto" />
           </Link>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -908,15 +908,15 @@ const newErrors = {
             <header className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
                 <div className="container mx-auto px-6 py-4">
                     <div className="flex items-center justify-between">
-                        <div className="text-2xl font-light tracking-tight text-black">
-                            {language === 'fr' ? 'Générateur de Lettres de Motivation' : 'Motivation Letter Generator'}
-                        </div>
+                        <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
+                            <img src="/logo.webp" alt="Logo" className="h-8 w-auto" />
+                        </Link>
                         <Button
                             variant="outline"
                             onClick={() => navigate('/dashboard')}
                             className="neumorphic bg-black text-white hover:bg-black hover:text-white border border-black"
                         >
-                            {language === 'fr' ? 'Retour au Tableau de Bord' : 'Back to Dashboard'}
+                            Back to Dashboard
                         </Button>
                     </div>
                 </div>
@@ -927,12 +927,10 @@ const newErrors = {
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-12">
                         <h1 className="text-4xl md:text-5xl font-light tracking-tight text-black mb-4 fade-in-up">
-                            {language === 'fr' ? 'Générateur de Lettres de Motivation' : 'Motivation Letter Generator'}
+                            Motivation Letter Generator
                         </h1>
                         <p className="text-xl font-light text-gray-600 fade-in-up" style={{ animationDelay: '0.2s' }}>
-                            {language === 'fr'
-                                ? 'Créez des lettres de motivation professionnelles et persuasives en quelques minutes'
-                                : 'Create professional and persuasive motivation letters in minutes'}
+                            Create professional and persuasive motivation letters in minutes
                         </p>
                     </div>
 

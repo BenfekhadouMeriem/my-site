@@ -51,7 +51,7 @@ const Register = () => {
                 type="text"
                 value={formData.firstName}
                 onChange={handleChange}
-                className="w-full bg-gray-200 border border-black"
+                className="ww-full bg-gray-200 text-black border border-gray-400 rounded-lg p-3 placeholder-gray-500"
                 placeholder="John"
                 required
               />
@@ -66,7 +66,7 @@ const Register = () => {
                 type="text"
                 value={formData.lastName}
                 onChange={handleChange}
-                className="w-full bg-gray-200 border border-black"
+                className="w-full bg-gray-200 text-black border border-gray-400 rounded-lg p-3 placeholder-gray-500"
                 placeholder="Doe"
                 required
               />

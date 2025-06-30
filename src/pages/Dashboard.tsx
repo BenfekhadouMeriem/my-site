@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -11,9 +11,9 @@ const Dashboard = () => {
       <header className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-light tracking-tight text-black">
-              Consulting
-            </div>
+            <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
+              <img src="/logo.webp" alt="Logo" className="h-8 w-auto" />
+            </Link>
             <Button
               variant="outline"
               onClick={() => navigate("/")}
