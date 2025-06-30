@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
@@ -7,11 +8,16 @@ import { Link } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // For now, just redirect to dashboard
-    window.location.href = "/dashboard";
+    if (email === "admin@example.com" && password === "1234") {
+      navigate("/dashboard"); // 🔁 Redirection interne
+    } else {
+      alert("Email ou mot de passe incorrect");
+    }
   };
 
   return (
